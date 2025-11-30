@@ -1,0 +1,181 @@
+/* ---------- Global Body ---------- */
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: linear-gradient(to right, #ff3b3b, #ff8a3b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ---------- Login Container ---------- */
+.login-container {
+  background: #ffffff;
+  width: 420px;
+  padding: 45px 35px;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.4s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.18);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-container h2 {
+  margin-top: 0;
+  font-size: 30px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
+/* ---------- Labels ---------- */
+.login-container label {
+  display: block;
+  text-align: left;
+  margin: 20px 0 8px;
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+/* ---------- Input Fields ---------- */
+.login-container input {
+  width: 100%;
+  height: 48px; /* ✅ uniform height */
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.25s ease-in-out;
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+/* Hover effect */
+.login-container input:hover {
+  border-color: #ff3b3b;
+}
+
+/* Focus (typing) glow */
+.login-container input:focus {
+  border-color: #ff3b3b;
+  box-shadow: 0 0 8px rgba(255, 59, 59, 0.6);
+  background-color: #fff;
+}
+
+/* ---------- Password Field (Eye Icon) ---------- */
+.password-field {
+  position: relative;
+  width: 100%;
+}
+
+.password-field input {
+  padding-right: 45px; /*  room for eye icon */
+}
+
+/* Eye Icon */
+.password-field i {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #999;
+  font-size: 18px;
+  transition: color 0.3s, transform 0.2s;
+  user-select: none;
+}
+
+.password-field i:hover {
+  color: #ff3b3b;
+  transform: translateY(-50%) scale(1.15);
+}
+
+/* ---------- Buttons ---------- */
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 10px;
+}
+
+button {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  letter-spacing: 0.5px;
+}
+
+/* Primary Buttons */
+.cancel,
+.login {
+  background: linear-gradient(to right, #ff3b3b, #ff8a3b);
+  color: white;
+}
+
+/* Hover effect */
+button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Register Text ---------- */
+.register-text {
+  margin-top: 25px;
+  font-size: 14px;
+  color: #444;
+}
+
+.register-text a {
+  color: #ff3b3b;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+  color: #ff6b3b;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 480px) {
+  .login-container {
+    width: 90%;
+    padding: 35px 25px;
+  }
+
+  .login-container h2 {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}
+
+
