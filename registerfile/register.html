@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register - LabTrack</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for Eye Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="registerstyle.css">
+</head>
+
+<body>
+  <div class="register-container">
+    
+    <!-- LABTRACK HEADER -->
+    <div class="labtrack-header">
+      <i class="fa-solid fa-computer lab-icon"></i>
+      <h1>LabTrack</h1>
+      <p class="tagline">
+        <span class="highlight">Computer Lab Attendance System</span>
+      </p>
+    </div>
+
+    <div class="divider"></div>
+
+    <h2>Register</h2>
+
+    <!-- Register Form -->
+    <form id="registerForm">
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <label for="email">Email/ID No.</label>
+      <input type="text" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="password">Password</label>
+      <div class="password-field">
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <i class="fa-solid fa-eye-slash" id="togglePassword"></i>
+      </div>
+
+      <label for="confirm-password">Confirm Password</label>
+      <div class="password-field">
+        <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+        <i class="fa-solid fa-eye-slash" id="toggleConfirmPassword"></i>
+      </div>
+
+      <!-- Role Selection -->
+      <label>Select Role</label>
+      <div class="role-options">
+        <input type="radio" id="student" name="role" value="student" required>
+        <label class="custom-radio" for="student">Student</label>
+
+        <input type="radio" id="teacher" name="role" value="teacher" required>
+        <label class="custom-radio" for="teacher">Teacher</label>
+      </div>
+
+      <div class="btn-group">
+        <button type="submit">Register</button>
+      </div>
+
+    </form>
+
+    <div class="register-text">
+      Already have an account? <a href="../loginfile/login.html">Login here</a>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="register.js"></script>
+</body>
+</html>
