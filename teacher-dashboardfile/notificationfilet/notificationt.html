@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notifications</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="notificationt.css" />
+</head>
+<body>
+
+<div class="dashboard-container">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar">
+    <img src="university-of-san-agustin logo.png" alt="University Logo" class="sidebar-logo">
+
+    <h2 class="menu-label">MAIN MENU</h2>
+
+    <ul class="menu-list">
+      <li class="nav-item">
+        <a href="../../teacher-dashboardfile/teacher-dashboard.html">
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="../classlistfile/classlist.html">
+          <i class="fa-solid fa-chalkboard-user"></i> Class Section
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a href="#">
+          <i class="fa-solid fa-calendar-days"></i> Lab Session Scheduling
+        </a>
+      </li>
+
+      <!--  ACTIVE SELECTED PAGE -->
+      <li class="nav-item active">
+        <a href="notificationt.html">
+          <i class="fa-solid fa-bell"></i> Notification
+        </a>
+      </li>
+
+      <li class="nav-item logout">
+        <a href="../../loginfile/login.html">
+          <i class="fa-solid fa-right-from-bracket"></i> Log Out
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- ============ TOP BAR ============ -->
+  <div class="notification-topbar">
+    <h1>Notifications</h1>
+  </div>
+
+  <!-- ============ MAIN CONTENT ============ -->
+  <main class="notification-main">
+    <div class="notification-container">
+
+      <div class="notification-header">YOUR NOTIFICATIONS</div>
+
+      <div id="notification-list">
+        <div class="notification-card">
+          <div class="notification-title">New Lab Announcement</div>
+          <div class="notification-time">
+            <time datetime="2025-12-01T16:00">Today - 4:00 PM</time>
+          </div>
+          <div class="notification-message">Your CSIT 311 lab session has been moved to Lab C.</div>
+        </div>
+
+        <div class="notification-card">
+          <div class="notification-title">System Update</div>
+          <div class="notification-time">
+            <time datetime="2025-11-30T14:15">Yesterday - 2:15 PM</time>
+          </div>
+          <div class="notification-message">The portal underwent system maintenance to improve performance.</div>
+        </div>
+      </div>
+
+      <a href="../teacher-dashboardfile/teacher-dashboard.html" class="back-btn">← Back to Dashboard</a>
+
+    </div>
+  </main>
+
+</div>
+<script src="notificationt.js"></script>
+</body>
+</html>
