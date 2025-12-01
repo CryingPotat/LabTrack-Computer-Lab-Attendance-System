@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Session Dashboard</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="labsession.css">
+</head>
+<body>
+    <div class="dashboard-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="university-of-san-agustin logo.png" class="sidebar-logo" alt="University of San Agustin Logo" />
+                <h2 class="menu-label">MAIN MENU</h2>
+            </div>
+
+            <ul class="menu-list">
+                <li class="nav-item">
+                    <a href="../../student-dashboardfile/student-dashboard.html">
+                        <i class="fa-solid fa-house"></i> Home
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="lab-session.html">
+                        <i class="fa-solid fa-desktop"></i> Lab Session
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="../notificationfile/notification.html">
+                        <i class="fa-solid fa-bell"></i> Notification
+                    </a>
+                </li>
+
+                <li class="nav-item logout">
+                    <a href="../loginfile/login.html">
+                        <i class="fa-solid fa-right-from-bracket"></i> Log out
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- TOP HEADER -->
+            <header class="dashboard-top-header">
+                <span class="username" id="studentName">Student Name</span>
+                <button class="user-avatar" id="profileButton" aria-label="User Profile">
+                    <i class="fa-solid fa-user"></i>
+                </button>
+            </header>
+
+            <!-- PAGE CONTENT -->
+            <h2 class="page-title">Scheduled Lab Sessions</h2>
+            <div class="labs-scroll-area">
+                <!-- Lab cards will be dynamically generated -->
+            </div>
+        </div> <!-- end main content -->
+
+    </div> <!-- end dashboard container -->
+
+    <!-- JS -->
+    <script src="labsession.js"></script>
+</body>
+</html>

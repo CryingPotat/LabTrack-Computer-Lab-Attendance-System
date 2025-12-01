@@ -1,0 +1,255 @@
+/* -------------------- Global Setup -------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    background: linear-gradient(to right, #ff3b3b, #ff8a3b);
+    overflow: hidden;
+}
+
+/* -------------------- Dashboard Container -------------------- */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* -------------------- Sidebar -------------------- */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #000;
+    color: #fff;
+    padding-top: 20px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    text-align: center;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.sidebar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -15px;
+    width: 30px;
+    height: 100%;
+    background-color: #ff3333;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    z-index: 0;
+}
+
+.sidebar > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Sidebar Logo */
+.sidebar-logo {
+    width: 100px;
+    height: auto;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+/* MAIN MENU Label */
+.menu-label {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: 5px;
+}
+
+/* Menu List */
+.menu-list {
+    list-style: none;
+    margin-top: 30px;
+    padding: 0;
+}
+
+.menu-list .nav-item {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.05em;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.2s;
+}
+
+.menu-list .nav-item i {
+    min-width: 30px;
+    text-align: center;
+    font-size: 1.6em;
+}
+
+/* Hover / active styles */
+.menu-list .nav-item:hover,
+.menu-list .nav-item.active {
+    background-color: #fff;
+    color: #ffd700;
+}
+
+.menu-list .nav-item:hover i,
+.menu-list .nav-item.active i {
+    color: #ffd700;
+}
+
+.menu-list .nav-item.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 5px;
+    background-color: #ffd700;
+    border-radius: 0 5px 5px 0;
+}
+
+/* -------------------- Highlight Lab Session by default -------------------- */
+.menu-list .nav-item:nth-child(2) {
+    background-color: #fff;
+    color: #ffd700;
+}
+
+.menu-list .nav-item:nth-child(2) i {
+    color: #ffd700;
+}
+
+.menu-list .nav-item:nth-child(2)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 8px;
+    bottom: 8px;
+    width: 5px;
+    background-color: #ffd700;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Logout */
+.logout {
+    margin-top: 80px;
+}
+
+/* -------------------- Top Header -------------------- */
+.dashboard-top-header {
+    position: fixed;
+    top: 0;
+    left: 250px; /* matches sidebar width */
+    right: 0;
+    height: 70px;
+    background: linear-gradient(to right, #ff3b3b, #ff8a3b);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 40px;
+    z-index: 5;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #000;
+    margin-right: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+/* -------------------- Main Content -------------------- */
+.main-content {
+    margin-left: 250px; /* same as sidebar width */
+    padding: 100px 40px 30px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+/* -------------------- Lab Cards -------------------- */
+.lab-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    color: #000;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.lab-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+.lab-details h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.lab-details p {
+    margin: 3px 0;
+}
+
+.lab-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4em;
+}
+
+/* Grey Card */
+.lab-card-grey {
+    background-color: #e0e0e0;
+}
+
+/* Blue Card */
+.lab-card-blue {
+    background-color: #4169e1;
+    color: #fff;
+}
+
+.lab-card-blue .lab-image {
+    background-color: #4169e1;
+    border-color: #4169e1;
+    color: #fff;
+}
+
+/* -------------------- Links -------------------- */
+a {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
