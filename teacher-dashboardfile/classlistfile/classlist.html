@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teacher Class List</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="classlist.css" />
+</head>
+<body>
+
+  <div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <img src="university-of-san-agustin logo.png" class="sidebar-logo" alt="University of San Agustin Logo" />
+        <h2 class="menu-label">MAIN MENU</h2>
+      </div>
+
+      <ul class="menu-list">
+        <li class="nav-item">
+          <a href="../../teacher-dashboardfile/teacher-dashboard.html">
+            <i class="fa-solid fa-house"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="classlist.html">
+            <i class="fa-solid fa-chalkboard-user"></i> Class Section
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#">
+            <i class="fa-solid fa-calendar-days"></i> Lab Session Scheduling
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="../notificationfilet/notificationt.html">
+            <i class="fa-solid fa-bell"></i> Notification
+          </a>
+        </li>
+        <li class="nav-item logout">
+          <a href="../loginfile/login.html">
+            <i class="fa-solid fa-right-from-bracket"></i> Log Out
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+      <!-- TOP HEADER -->
+      <header class="dashboard-top-header">
+        <span class="username" id="teacherName">Teacher Name</span>
+        <button class="user-avatar" id="profileButton" aria-label="User Profile">
+          <i class="fa-solid fa-user"></i>
+        </button>
+      </header>
+
+      <!-- PAGE CONTENT -->
+      <h2 class="page-title">Class List</h2>
+
+      <div class="labs-scroll-area">
+        <!-- Example Class Cards -->
+        <div class="lab-card lab-card-grey">
+          <div class="lab-details">
+            <p class="course-code">BSIT 3K - CSIT 311</p>
+            <p class="section">Section C</p>
+          </div>
+          <div class="lab-image">
+            <img src="csit311.png" alt="CSIT 311" width="50">
+          </div>
+        </div>
+
+        <div class="lab-card lab-card-blue">
+          <div class="lab-details">
+            <p class="course-code">BSIT 1T - IT 101</p>
+            <p class="section">Section A</p>
+          </div>
+          <div class="lab-image">
+             <img src="it101.png" alt="IT 101" width="50">
+
+          </div>
+        </div>
+
+        <div class="lab-card lab-card-grey">
+          <div class="lab-details">
+            <p class="course-code">BSIT 2K - CSIT 212</p>
+            <p class="section">Section B</p>
+          </div>
+          <div class="lab-image">
+            <img src="csit212.png" alt="CSIT 212" width="50">
+
+          </div>
+        </div>
+      </div>
+    </div> <!-- end main content -->
+
+  </div> <!-- end dashboard container -->
+
+  <!-- JS -->
+  <script src="classlist.js"></script>
+</body>
+</html>
+
